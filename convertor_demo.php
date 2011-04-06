@@ -10,7 +10,7 @@
     <body>
         <form method="post">
             <p>
-                <textarea name="message" rows="8" cols="45"><?php echo isset($_POST['message']) ? $_POST['message'] : ''; ?></textarea><br />
+                <textarea name="message" rows="8" cols="45"><?php echo isset($_POST['message']) ? stripcslashes(htmlspecialchars($_POST['message'])) : ''; ?></textarea><br />
                 <input type="submit" value="Envoyer" />
             </p>
         </form>
