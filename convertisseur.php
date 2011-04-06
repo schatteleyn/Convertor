@@ -33,5 +33,5 @@ function unameize($string, $character = '<br />') {
 }
 
 function convert($text) {
-    return unameize(suppr(nameize(stripcslashes($text))));
+    return unameize(suppr(nameize(stripcslashes(htmlspecialchars($text)))));
 }
