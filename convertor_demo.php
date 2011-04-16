@@ -17,7 +17,7 @@
         </form>
         <?php if (isset($_POST['message'])) { ?>
         <p>
-            <?php echo convert_first($_POST['message'], $_POST['delimiter']); ?>
+            <?php echo convert($_POST['message'], $_POST['delimiter']); ?>
         </p>
         <?php } ?>
     </body>

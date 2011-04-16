@@ -1,4 +1,6 @@
 Just an "app" in PHP. I needed to have every first letter capitalize and the rest in lowercase.
-Surely not the best way or the most efficient, but it works.
+I try to improve the code, by letting the user choosing when he wants to have uppercase. Just have to choose the delimiter (for example, a space, a point É). 
+But for now, it's buggy, so I work on it.
+
 It's under the WTFPL, so feel free to use it ! http://sam.zoy.org/wtfpl/
 I'd be glad to receive comment, improvement or cookies !

@@ -1,9 +1,8 @@
 <?php
 
-/* I really simplified the code this time ! */
-
-function convert_first($text,$delimiter) {
+function convert($text,$delimiter) {
     $text = stripcslashes(htmlspecialchars($text)); // Prevent XSS vulnerabilities and un-quote the string
+   // $delimiter = htmlspecialchars($delimiter);
     $linesBefore = explode($delimiter, $text); // Lines are put in an array
     $linesAfter = array();
     foreach ($linesBefore as $line) {
