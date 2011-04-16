@@ -16,7 +16,7 @@
         </form>
         <?php if (isset($_POST['message'])) { ?>
         <p>
-            <?php echo convert($_POST['message']); ?>
+            <?php echo convert_first($_POST['message']); ?>
         </p>
         <?php } ?>
     </body>
