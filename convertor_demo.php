@@ -11,12 +11,13 @@
         <form method="post">
             <p>
                 <textarea name="message" rows="8" cols="45"><?php echo isset($_POST['message']) ? stripcslashes(htmlspecialchars($_POST['message'])) : ''; ?></textarea><br />
+                Delimiter: <input type="text" name="delimiter"><br />
                 <input type="submit" value="Envoyer" />
             </p>
         </form>
         <?php if (isset($_POST['message'])) { ?>
         <p>
-            <?php echo convert_first($_POST['message']); ?>
+            <?php echo convert_first($_POST['message'], $_POST['delimiter']); ?>
         </p>
         <?php } ?>
     </body>
