@@ -11,11 +11,11 @@
         <form method="post">
             <p>
                 <textarea name="message" rows="8" cols="45"><?php echo isset($_POST['message']) ? stripcslashes(htmlspecialchars($_POST['message'])) : ''; ?></textarea><br />
-                Delimiter: <input type="text" name="delimiter"><br />
+                Delimiter (by default, first letter of every lines will be capitalized): <input type="text" name="delimiter"><br />
                 <input type="submit" value="Envoyer" />
             </p>
         </form>
-        <?php if (isset($_POST['message'])) { ?>
+        <?php if (isset($_POST['message']) && isset($_POST['delimiter'])) { ?>
         <p>
             <?php echo convert($_POST['message'], $_POST['delimiter']); ?>
         </p>
