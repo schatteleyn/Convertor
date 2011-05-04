@@ -11,10 +11,9 @@ function convert($text, $delimiter) {
     $linesBefore = explode($delimiter, $text); // Lines are put in an array
     $linesAfter = array();
     foreach ($linesBefore as $line) {
-        $linesAfter[] = ucfirst(strtolower($line)); // For each line, the first character is capitalized and others letters are lowerized
+    	$linesAfter[] = strtr(ucfirst(strtolower($line)), 'ÀÁÂÃÄÇÈÉÊËÌÍÎÏÑÒÓÔÕÖÙÚÛÜÝ', 'àáâãäçèéêëìíîïñòóôõöùúûüýÿ'); // For each line, the first character is capitalized and others letters are lowerized
     }
     $text = implode($delimiter, $linesAfter); // All the modified lines are now put together
     $text = nl2br($text);
-    return($text);
-
+	return ($text);
 }
