@@ -10,8 +10,9 @@
     <body>
         <form method="post">
             <p>
-                <textarea name="message" rows="8" cols="45"><?php echo isset($_POST['message']) ? stripcslashes(htmlspecialchars($_POST['message'])) : ''; ?></textarea><br />
-                Delimiter (by default, first letter of every lines will be capitalized): <input type="text" name="delimiter"><br />
+            	Insert your text here: <br />
+                <textarea id="message" name="message" rows="8" cols="45"><?php echo isset($_POST['message']) ? stripcslashes(htmlspecialchars($_POST['message'])) : ''; ?></textarea><br />
+                Delimiter (by default, first letter of every lines will be capitalized): <br /><input type="text" name="delimiter"><br />
                 <input type="submit" value="Envoyer" />
             </p>
         </form>
