@@ -1,9 +1,11 @@
 <?php
 	
-function convert($text, $delimiter) {
+//function convert($text, $delimiter) {
 	
-	$text = stripcslashes(htmlspecialchars($text)); // Prevent XSS vulnerabilities and un-quote the string
-    $delimiter = htmlspecialchars($delimiter);
+	//$text = stripcslashes(htmlspecialchars($text)); // Prevent XSS vulnerabilities and un-quote the string
+    //$delimiter = htmlspecialchars($delimiter);
+    $text = stripcslashes(htmlspecialchars($_GET['text'])); // Prevent XSS vulnerabilities and un-quote the string
+    $delimiter = htmlspecialchars($_GET['delimiter']);
     $encode = 'UTF-8';
     
     if ($delimiter == " "){ // If delimiter is a space, no need to execute rest of code, use m_convert_case MB_CASE_TITLE to work with every langages
@@ -26,6 +28,6 @@ function convert($text, $delimiter) {
     $text = nl2br($text);
     return($text);
 
-}
+//}
 
 ?>
