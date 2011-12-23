@@ -2,7 +2,7 @@ PHP application. You capitalized first letter of every lines by default. You can
 If the first character is a "special" character like an accent, it won't appear, except if the delimiter is a space.
 
 Scala version by @blouerat https://gist.github.com/992161
-Ruby version in progress.
+Ruby version: https://gist.github.com/1514484
 
 It's under the WTFPL, so feel free to use it ! http://sam.zoy.org/wtfpl/
 I'd be glad to receive comment, improvement or cookies !
